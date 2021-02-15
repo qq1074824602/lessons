@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  	<title>test7</title>
+  	<meta charset="utf-8">
+  	<style>
+  		img{
+  			width: 300px;
+  		}
+  	</style>
+</head>
+<body>
+	<h1>test7</h1>
+	<hr>
+<img src="img/345.jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ 	$(function(){
+    const gazofiles = [
+    'img/345.jpg',
+    'img/234.jpg',
+    'img/123.jpg',
+    'img/456.jpg',
+    ]
+    let num = 0
+    $("img").on("click",function(){
+      num++
+      if(num >= gazofiles.length){
+        num = 0
+      }
+      $("img").attr("src",gazofiles[ num ]);
+  })
+ })
+</script>
+</body>
+</html>

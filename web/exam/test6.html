@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  	<title>test6</title>
+  	<meta charset="utf-8">
+  	<style>
+  		img{
+  			width: 300px;
+  		}
+  	</style>
+</head>
+<body>
+	<h1>画面をグリックたら、次の画面を表示する</h1>
+	<hr>
+<img src="img/345.jpg">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ 	$(function(){
+ 		const gazofiles = [
+ 		'img/345.jpg',
+ 		'img/234.jpg',
+ 		]
+ 		let num =0
+
+ 		$("img").on("click",function(){
+ 			num++
+ 			if(num >= gazofiles.length){
+ 				num = 0
+ 			}
+ 			$("img").attr("src",gazofiles[ num ]);
+ 	})
+ })
+</script>
+</body>
+</html>

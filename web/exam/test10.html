@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>test10</title>
+    <meta charset="utf-8">
+    <style>
+      img{
+        width: 300px;
+      }
+    </style>
+</head>
+<body>
+  <h1>test10</h1>
+  <hr>
+<img src="img/345.jpg">
+<h2>1</h2>
+<br>
+<button id="aa">前の画面</button>
+<button id="bb">次の画面</button>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(function(){
+    const gazofiles = [
+    'img/345.jpg',
+    'img/234.jpg',
+    'img/123.jpg',
+    'img/456.jpg',
+    ]
+    const titles = [
+    `1`,
+    `2`,
+    `3`,
+    `4`
+    ]
+    let num = 0
+    $("img").on("click",function(){
+      num++
+      if(num >= gazofiles.length){
+        num = 0
+      }
+      $("img").attr("src",gazofiles[ num ]);
+      $("h2").text(titles[num]);
+  })
+    $("#bb").on("click",function(){
+      num++
+      if(num >= gazofiles.length){
+        num = 0
+      }
+      $("img").attr("src",gazofiles[ num ]);
+      $("h2").text(titles[num]);
+    })
+    $("#aa").on("click",function(){
+      num--
+      if(num >= gazofiles.length){
+        num = 0
+      }
+      $("img").attr("src",gazofiles[ num ]);
+      $("h2").text(titles[num]);
+    })
+ })
+</script>
+</body>
+</html>
