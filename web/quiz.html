@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+    <title>text2</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <h1>わたしはだれですか？</h1>
+    <hr>
+    <button id="tanaka">ヒョウ　ウセイ</button>
+    <hr>
+    <button id="yamamoto">チョウ　ウセイ</button>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $('button:first').on('click', function(){
+          $('h1').text('正解!');
+          $('button:odd').on('click', function(){
+            $('h1').text('ちがいます！');
+        });
+      })
+  </script>
+</script>
+</body>
+</html>

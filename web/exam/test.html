@@ -1,0 +1,63 @@
+ <!DOCTYPE html>
+  <html>
+  <head>
+  	<title>test</title>
+  	<meta charset="utf-8">
+  	<style>
+  		#d{
+  			color:red;
+  		}
+  		.f{
+  			font-size: 50pt;
+  		}
+  		table,td,th{
+  			border:1px solid black;
+  		}
+  	</style>
+  </head>
+  <body>
+   <ol id="f">
+　　<li id="a">ぶり</li>
+　　<li id="b">はまち</li>
+　　<li id="c">たい</li>
+　　<li id="d">まぐろ</li>
+　　<li id="e">こはだ</li>
+　</ol>
+
+ <hr>
+ 
+ <table id="table">
+ 	<tr>
+ 		<td>ぶり</td>
+ 		<td>鰤</td>
+ 	</tr>
+ 	<tr>
+ 		<td>はまち</td>
+ 		<td>魬</td>
+ 	</tr>
+ 	<tr>
+ 		<td>たい</td>
+ 		<td>鯛</td>
+ 	</tr>
+ 	<tr>
+ 		<td>まぐろ</td>
+ 		<td>鮪</td>
+ 	</tr>
+ 	<tr>
+ 		<td>こはだ</td>
+ 		<td>小鰭</td>
+ 　　</tr>
+</table>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+ 	$(function(){
+ 		$('li').css('click',function(){
+ 		 $(this).css('font-size','50pt');
+ 		});
+ 		$('li').css('click',function(){
+ 		 $(this).css('color','bule');
+       });
+     })
+ </script>
+  </body>
+  </html>
